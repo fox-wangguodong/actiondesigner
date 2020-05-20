@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PoseSettingWidget</class>
+ <widget class="QWidget" name="PoseSettingWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>390</width>
+    <height>316</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>301</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>左前腿上</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_forword_high_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-90.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>右前腿上</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_forword_high_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-90.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>头部</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="head_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-90.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>左前腿中</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_forword_mid_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-10.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>右前腿中</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_forword_mid_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-10.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>脖子</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="waist_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>左前腿下</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_forword_low_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>右前腿下</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_forword_low_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>左后腿上</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_backword_high_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-90.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_10">
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>右后腿上</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_backword_high_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-90.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2">
+     <layout class="QVBoxLayout" name="verticalLayout_11">
+      <item>
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string>递增刻度</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="step_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>0.001000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>0.100000000000000</double>
+        </property>
+        <property name="singleStep">
+         <double>0.010000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_12">
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>左后腿中</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_backword_mid_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-10.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_13">
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>右后腿中</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_backword_mid_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="minimum">
+         <double>-10.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>60.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_14">
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>左后腿下</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="left_backword_low_doubleSpinBox">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout_15">
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>右后腿下</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDoubleSpinBox" name="right_backword_low_doubleSpinBox">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*默认状态的样式*/
+QDoubleSpinBox{
+	border-radius:10px;
+	border:2px solid white;
+	color:green;
+	background:transparent;
+}
+/*鼠标悬停的样式*/
+QDoubleSpinBox:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被禁用时的样式*/
+QDoubleSpinBox:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <double>90.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

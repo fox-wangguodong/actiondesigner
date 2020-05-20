@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1160</width>
+    <height>1019</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+border-radius:15px
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>5</number>
+      </property>
+      <widget class="QSplitter" name="splitter_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="ActionListView" name="actionListView">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+        </widget>
+        <widget class="PoseListView" name="poseListView"/>
+        <widget class="PoseLibView" name="poseLibView"/>
+       </widget>
+       <widget class="PoseSettingWidget" name="poseSettingWidget" native="true">
+        <property name="styleSheet">
+         <string notr="true">background-color: white;</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="OpenglView" name="openglView" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-color: black;</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>PoseLibView</class>
+   <extends>QListWidget</extends>
+   <header>poselibview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>OpenglView</class>
+   <extends>QWidget</extends>
+   <header>openglview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PoseListView</class>
+   <extends>QListWidget</extends>
+   <header>poselistview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ActionListView</class>
+   <extends>QListWidget</extends>
+   <header>actionlistview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PoseSettingWidget</class>
+   <extends>QWidget</extends>
+   <header>posesettingwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ExitTipDialog</class>
+ <widget class="QDialog" name="ExitTipDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>271</width>
+    <height>201</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+	border-radius:20px;
+	border:3px solid white;
+	color:white;
+}
+
+QPushButton{
+	border-radius:10px;
+	border:2px solid white;
+	color:white;
+	background:transparent;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>211</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 20pt &quot;微软雅黑&quot;;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;确定退出程序?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_exit">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*默认状态的样式*/
+QPushButton{
+	border-radius:10px;
+	border:2px solid white;
+	color:white;
+	background:transparent;
+}
+
+/*鼠标悬停的样式*/
+QPushButton:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被按下时的样式*/
+QPushButton:pressed{
+	border:2px solid white;
+	color:white;
+	background-color:rgb(71,186,204);
+}
+
+/*被禁用时的样式*/
+
+QPushButton:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cancel">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>130</y>
+     <width>91</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*默认状态的样式*/
+QPushButton{
+	border-radius:10px;
+	border:2px solid white;
+	color:white;
+	background:transparent;
+}
+
+/*鼠标悬停的样式*/
+
+QPushButton:hover{
+	border:2px solid rgb(71,186,204);
+	color:rgb(71,186,204);
+	background:transparent;
+}
+
+/*被按下时的样式*/
+QPushButton:pressed{
+	border:2px solid white;
+	color:white;
+	background-color:rgb(71,186,204);
+}
+
+/*被禁用时的样式*/
+QPushButton:!enabled{
+	border:2px solid rgb(130,130,130);
+	color:rgb(130,130,130);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
